@@ -36,7 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.62929, 0 )
 pixel_size = 0.003
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
