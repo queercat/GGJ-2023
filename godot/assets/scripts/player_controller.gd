@@ -20,10 +20,10 @@ func handle_input(input : InputDefault, delta):
 		velocity -= camera.global_transform.basis.x * delta * move_speed
 		
 	if input.is_action_pressed("ui_up"):
-		velocity -= camera.global_transform.basis.z * delta * move_speed
+		velocity -= global_transform.basis.z * delta * move_speed
 		
 	if input.is_action_pressed("ui_down"):
-		velocity += camera.global_transform.basis.z * delta * move_speed
+		velocity += global_transform.basis.z * delta * move_speed
 	
 	
 	rotate_y(-mouse.x * mouse_sensitivity * delta)
