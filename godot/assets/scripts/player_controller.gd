@@ -95,8 +95,6 @@ func do_logic(delta):
 	# setting hud flashlight color
 	var r = (flashlight_timer/flashlight_duration)
 	var g = (((flashlight_timer/flashlight_duration) * -1) + 1)
-	
-	print (r, " ", g, " ", 0)	
 
 	flashlight_hud_color.color = Color(r, g, 0)
 	
@@ -112,7 +110,4 @@ func _process(delta):
 	do_physics(delta)
 	do_logic(delta)
 	
-	# print(flashlight_timer)
-	
 	var _result = move_and_collide(velocity)
-	pass

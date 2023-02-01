@@ -67,5 +67,3 @@ mesh = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="KinematicBody" parent="." instance=ExtResource( 4 )]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
