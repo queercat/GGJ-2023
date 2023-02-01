@@ -12,7 +12,6 @@ config_version=4
 
 config/name="GGJ-2023"
 run/main_scene="res://scenes/Road.tscn"
-config/icon="res://icon.png"
 
 [display]
 
