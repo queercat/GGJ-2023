@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/scripts/player_controller.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/Click.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/sprites/Flashlight.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 1.52
+height = 5.0
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025007, 7.13368, -1.42684 )
+far = 50.0
+
+[node name="Polygon2D" type="Polygon2D" parent="Camera"]
+position = Vector2( 21.5502, 212.013 )
+scale = Vector2( 0.4875, 0.4875 )
+z_as_relative = false
+antialiased = true
+polygon = PoolVector2Array( -35.1622, -7.10593, 20.5202, -7.32153, 24.1857, -11.041, 26.9887, -12.9815, 32.0556, -16.7547, 35.8289, -18.1562, 36.1109, 16.7502, 30.4986, 14.2318, 19.9935, 7.03659, -35.3381, 7.32422 )
+
+[node name="Flashlight" type="Sprite" parent="Camera/Polygon2D"]
+use_parent_material = true
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="Flashlight" type="SpotLight" parent="Camera"]
+transform = Transform( 1, -3.99738e-09, 1.83164e-10, 3.99738e-09, 0.99581, -0.0914495, 1.83164e-10, 0.0914495, 0.99581, 0.0250072, -0.806546, -2.37281 )
+light_color = Color( 0.92549, 0.807843, 0.588235, 1 )
+light_energy = 0.0
+light_indirect_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 0
+spot_range = 43.5652
+spot_attenuation = 1.51571
+spot_angle = 41.5605
+
+[node name="Clicker" type="AudioStreamPlayer3D" parent="Camera/Flashlight"]
+transform = Transform( 1, 3.99738e-09, 1.83164e-10, -3.99738e-09, 0.99581, 0.0914495, 1.83164e-10, -0.0914495, 0.99581, -0.28595, 0.404155, 0.167798 )
+stream = ExtResource( 2 )
+
+[node name="CSGSphere2" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 4, 0 )
+visible = false
+rings = 20
+smooth_faces = false
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5, 0 )
+shape = SubResource( 3 )
