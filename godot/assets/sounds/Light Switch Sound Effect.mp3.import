@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Light Switch Sound Effect.mp3-fb84c6f3396f14357068bfeee73f2cc6.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Light Switch Sound Effect.mp3"
+dest_files=[ "res://.import/Light Switch Sound Effect.mp3-fb84c6f3396f14357068bfeee73f2cc6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Sound of dial-up Internet.mp3-01e85337e17db62e70a97f2b5f1cddd7.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/The Sound of dial-up Internet.mp3"
+dest_files=[ "res://.import/The Sound of dial-up Internet.mp3-01e85337e17db62e70a97f2b5f1cddd7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
