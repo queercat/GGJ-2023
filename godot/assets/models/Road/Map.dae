@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.90.1 commit date:2020-09-23, commit time:06:43, hash:3e85bb34d0d7</authoring_tool>
+    </contributor>
+    <created>2023-02-05T04:47:35</created>
+    <modified>2023-02-05T04:47:35</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Road-effect">
+      <profile_COMMON>
+        <newparam sid="Asphalt_Road_png-surface">
+          <surface type="2D">
+            <init_from>Asphalt_Road_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Asphalt_Road_png-sampler">
+          <sampler2D>
+            <source>Asphalt_Road_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Asphalt_Road_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="DirtL-effect">
+      <profile_COMMON>
+        <newparam sid="DirtL_png-surface">
+          <surface type="2D">
+            <init_from>DirtL_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DirtL_png-sampler">
+          <sampler2D>
+            <source>DirtL_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="DirtL_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Grass-effect">
+      <profile_COMMON>
+        <newparam sid="Grass_png-surface">
+          <surface type="2D">
+            <init_from>Grass_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Grass_png-sampler">
+          <sampler2D>
+            <source>Grass_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Grass_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Concrete-effect">
+      <profile_COMMON>
+        <newparam sid="Concrete_png-surface">
+          <surface type="2D">
+            <init_from>Concrete_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Concrete_png-sampler">
+          <sampler2D>
+            <source>Concrete_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Concrete_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Asphalt_Road_png" name="Asphalt_Road_png">
+      <init_from>Asphalt%20Road.png</init_from>
+    </image>
+    <image id="Concrete_png" name="Concrete_png">
+      <init_from>Concrete.png</init_from>
+    </image>
+    <image id="DirtL_png" name="DirtL_png">
+      <init_from>DirtL.png</init_from>
+    </image>
+    <image id="Grass_png" name="Grass_png">
+      <init_from>Grass.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Road-material" name="Road">
+      <instance_effect url="#Road-effect"/>
+    </material>
+    <material id="DirtL-material" name="DirtL">
+      <instance_effect url="#DirtL-effect"/>
+    </material>
+    <material id="Grass-material" name="Grass">
+      <instance_effect url="#Grass-effect"/>
+    </material>
+    <material id="Concrete-material" name="Concrete">
+      <instance_effect url="#Concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Cube_003-mesh" name="Cube.003">
+      <mesh>
+        <source id="Cube_003-mesh-positions">
+          <float_array id="Cube_003-mesh-positions-array" count="84">-1 2.595237 -0.2771314 1 2.595237 -0.2771314 -1 0.5952373 -0.2771314 0.9999998 0.5952373 -0.2771314 -1 0.3452373 -0.2771314 0.9999998 0.3452373 -0.2771314 1 2.845237 -0.2771314 -1 2.845237 -0.2771314 1 3.215756 1.181476 -1 3.215756 1.181476 1 5.221871 1.181476 -1 5.221871 1.181476 -1 2.758311 -0.3151875 1 2.758311 -0.3151875 -1 -0.07899069 -0.35598 0.9999998 -0.07899075 -0.35598 -1 -0.8252562 -0.6273967 0.9999998 -0.8252563 -0.6273967 -1 -17.4286 -0.6273967 1 -17.4286 -0.6273967 0.9999998 -4.145925 -0.6273967 0.9999999 -7.466594 -0.6273967 1 -10.78726 -0.6273967 1 -14.10793 -0.6273967 -1 -14.10793 -0.6273967 -1 -10.78726 -0.6273967 -1 -7.466593 -0.6273967 -1 -4.145925 -0.6273967</float_array>
+          <technique_common>
+            <accessor source="#Cube_003-mesh-positions-array" count="28" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube_003-mesh-normals">
+          <float_array id="Cube_003-mesh-normals-array" count="45">0 0 -1 0 0.4010447 -0.9160585 0 0.9692183 -0.2462031 0 -0.2272613 -0.9738339 0 0.1827343 -0.9831624 0 0.3417958 -0.9397743 0 0 -1 0 0.4010466 -0.9160577 0 0.9692182 -0.2462034 0 -0.2272619 -0.9738337 0 0.1827342 -0.9831624 0 0.3417958 -0.9397743 0 0 -1 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Cube_003-mesh-normals-array" count="15" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube_003-mesh-map-0">
+          <float_array id="Cube_003-mesh-map-0-array" count="156">0 1 1 0 1 1 0.9077828 0.9999648 0.6105364 3.54648e-5 0.9077826 3.54648e-5 0.5932076 0.9972231 -8.55952e-4 -0.002704441 0.5932112 -0.002704381 0 0 1 1 0 1 0.875 0.75 0.875 0.5 0.875 0.5 0.9982219 0.9972231 0.7600367 -0.002704381 0.9982241 -0.002704381 0.7411637 0.9374536 4.66975e-5 4.64442e-5 0.7411637 4.65038e-5 0.3970582 0.9999369 6.30036e-5 6.30036e-5 0.3970581 6.30036e-5 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0.9077828 0.9999648 0.6105369 0.9999648 0.6105364 3.54648e-5 0.5932076 0.9972231 -8.50081e-4 0.9972231 -8.55952e-4 -0.002704441 0 0 1 0 1 1 0.875 0.75 0.875 0.75 0.875 0.5 0.9982219 0.9972231 0.7600331 0.9972231 0.7600367 -0.002704381 0.7411637 0.9374536 4.64442e-5 0.9374536 4.66975e-5 4.64442e-5 0.3970582 0.9999369 6.3093e-5 0.9999371 6.30036e-5 6.30036e-5 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Cube_003-mesh-map-0-array" count="78" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cube_003-mesh-vertices">
+          <input semantic="POSITION" source="#Cube_003-mesh-positions"/>
+        </vertices>
+        <triangles material="Road-material" count="2">
+          <input semantic="VERTEX" source="#Cube_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_003-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 0 0 1 1 0 2 3 0 39 2 0 40 0 0 41</p>
+        </triangles>
+        <triangles material="DirtL-material" count="10">
+          <input semantic="VERTEX" source="#Cube_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_003-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 3 4 0 4 2 0 5 12 1 6 6 1 7 13 1 8 0 3 15 13 3 16 1 3 17 5 4 18 14 4 19 4 4 20 15 5 21 16 5 22 14 5 23 3 0 42 5 0 43 4 0 44 12 7 45 7 7 46 6 7 47 0 9 54 12 9 55 13 9 56 5 10 57 15 10 58 14 10 59 15 11 60 17 11 61 16 11 62</p>
+        </triangles>
+        <triangles material="Grass-material" count="10">
+          <input semantic="VERTEX" source="#Cube_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_003-mesh-map-0" offset="2" set="0"/>
+          <p>23 0 24 18 0 25 24 0 26 17 0 27 27 0 28 16 0 29 20 0 30 26 0 31 27 0 32 21 0 33 25 0 34 26 0 35 22 6 36 24 6 37 25 6 38 23 0 63 19 0 64 18 0 65 17 12 66 20 12 67 27 12 68 20 13 69 21 13 70 26 13 71 21 14 72 22 14 73 25 14 74 22 0 75 23 0 76 24 0 77</p>
+        </triangles>
+        <triangles material="Concrete-material" count="4">
+          <input semantic="VERTEX" source="#Cube_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_003-mesh-map-0" offset="2" set="0"/>
+          <p>6 2 9 9 2 10 8 2 11 9 0 12 10 0 13 8 0 14 6 8 48 7 8 49 9 8 50 9 0 51 11 0 52 10 0 53</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Cube" name="Cube" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Cube_003-mesh" name="Cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Road-material" target="#Road-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="DirtL-material" target="#DirtL-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Grass-material" target="#Grass-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Concrete-material" target="#Concrete-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
